@@ -45,4 +45,22 @@ const conceptExplainPrompt = (question) => `
     Important: Do NOT add any extra text outside the JSON format. Only return valid JSON.
     `;
 
-module.exports = { questionAnswerPrompt, conceptExplainPrompt };
+const feedbackPrompt = ({ question, correctAns, userAns }) => `
+    You are an AI interview coach.
+    
+    Task:
+    - Review the user's answer to the following interview question.
+    - Question: "${question}"
+    - Correct Answer: "${correctAns}"
+    - User's Answer: "${userAns}"
+    - Provide constructive feedback on the user's answer, mentioning strengths and areas for improvement.
+    - Give a rating from 1 (poor) to 5 (excellent) based on accuracy, clarity, and completeness.
+    - Return the result as a valid JSON object in the following format:
+    {
+      "feedback": "Your feedback here.",
+      "rating": "1-5"
+    }
+    Important: Do NOT add any extra text outside the JSON format. Only return valid JSON.
+`;
+
+module.exports = { questionAnswerPrompt, conceptExplainPrompt, feedbackPrompt };
