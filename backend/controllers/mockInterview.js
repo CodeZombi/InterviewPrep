@@ -8,7 +8,7 @@ const analyzeVoiceCoach = require("../utils/analyzeVoiceCoach");
 const extractAudio          = require("../utils/extractAudio");
 require("dotenv").config();
 
-const WHISPER_SPACE = process.env.WHISPER_SPACE_URL;
+const WHISPER_SPACE = 'https://hf-audio-whisper-large-v3-turbo.hf.space';
 
 /* ───────── create ───────── */
 const createMockInterview = async (req, res) => {
