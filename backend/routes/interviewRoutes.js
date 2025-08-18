@@ -1,5 +1,5 @@
 const express = require('express');
-const { createInterview, getInterviewById, getMyInterviews, deleteInterview } = require('../controllers/InterviewController');
+const { createInterview, getInterviewById, getMyInterviews, deleteInterview } = require('../controllers/interviewController');
 const { protect } = require('../middlewares/authMiddleware');
 
 const router = express.Router();
