@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import ResumeAnalyzer from "./pages/Home/ResumeAnalyzer";
 import ProfileInterviews from "./pages/ProfileInterviews";
-import InterviewSummaryPage from "./pages/InterviewSummaryPage";
+import InterviewSummaryPage from "./pages/interviewSummaryPage";
 import LandingPage from "./pages/LandingPage";
 import Dashboard from "./pages/Home/Dashboard";
 import InterviewPrep from "./pages/InterviewPrep/InterviewPrep";
