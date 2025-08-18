@@ -28,9 +28,17 @@ const LandingPage = () => {
 
   const handleCTA2 = () => {
     if (!user) {
-      setOpenAuthModal(false);
+      setOpenAuthModal(true);
     } else {
-      navigate("/mock-interview");
+      navigate("/dashboard-mock-interviews");
+    }
+  };
+
+  const handleCTA3 = () => {
+    if (!user) {
+      setOpenAuthModal(true);
+    } else {
+      navigate("/resume-analyzer");
     }
   };
 
@@ -100,6 +108,18 @@ const LandingPage = () => {
               <button
                 className="bg-black text-sm font-semibold text-white px-7 py-2.5 rounded-full hover:bg-yellow-100 hover:text-black border border-yellow-50 hover:border-yellow-300 transition-colors cursor-pointer"
                 onClick={handleCTA2}
+              >
+                Get Started
+              </button>
+            </div>
+            <div className="w-full md:w-1/2">
+              <p className="text-[17px] text-gray-900 mr-0 md:mr-20 mb-6">
+                Want to know how your resume stands out? Our Resume Analyzer scans your resume for key skills, formatting, and ATS compatibility. Get instant insights on strengths, gaps, and areas of improvement.
+              </p>
+
+              <button
+                className="bg-black text-sm font-semibold text-white px-7 py-2.5 rounded-full hover:bg-yellow-100 hover:text-black border border-yellow-50 hover:border-yellow-300 transition-colors cursor-pointer"
+                onClick={handleCTA3}
               >
                 Get Started
               </button>

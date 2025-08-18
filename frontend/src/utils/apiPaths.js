@@ -1,4 +1,4 @@
-export const BASE_URL = "http://localhost:8000";
+export const BASE_URL = "https://interviewprep-4qy0.onrender.com";
 
 export const API_PATHS = {
   AUTH: {
@@ -13,8 +13,10 @@ export const API_PATHS = {
 
   AI: {
     GENERATE_QUESTIONS: "/api/ai/generate-questions", // Generate interview questions and answers using Gemini
+    GENERATE_INTERVIEW_QUESTIONS: "/api/ai/generate-interview-questions", // Generate interview questions and answers using Gemini
     GENERATE_EXPLANATION: "/api/ai/generate-explanation", // Generate concept explanation using Gemini
   },
+
 
   SESSION: {
     CREATE: "/api/sessions/create", // Create a new interview session with questions
@@ -23,8 +25,22 @@ export const API_PATHS = {
     DELETE: (id) => `/api/sessions/${id}`, // Delete a session
   },
 
-  QUESTION: {
-    ADD_TO_SESSION: "/api/questions/add", // Add more questions to a session
+  INTERVIEW: {
+    CREATE: "/api/interview/create", // Create a new mock interview
+    GET_ALL: "/api/interview/my-interviews", // Get all user mock interviews
+    GET_ONE: (id) => `/api/interview/${id}`, // Get mock interview details
+    DELETE: (id) => `/api/interview/${id}`, // Delete a mock interview
+  },
+
+  INTERVIEW_QUESTION: {
+    SESSION: {
+    CREATE: "/api/sessions/create-interview", // Create a new interview session with questions
+    GET_ALL: "/api/sessions/my-interview-sessions", //  Get all user sessions
+    GET_ONE: (id) => `/api/interview-sessions/${id}`, // Get session details with questions
+    DELETE: (id) => `/api/interview-sessions/${id}`, // Delete a session
+  },
+
+  ADD_TO_SESSION: "/api/questions/add", // Add more questions to a session
     PIN: (id) => `/api/questions/${id}/pin`, // Pin or Unpin a question
     UPDATE_NOTE: (id) => `/api/questions/${id}/note`, // Update/Add a note to a question
   },
